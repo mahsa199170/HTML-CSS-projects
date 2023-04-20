@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Forms</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Form Styles</h1>
+      </header>
+
+    <form>
+
+        <!-- gender -->
+        <p>You are a...</p>
+      <input type="radio" id="male" name="gender" />
+      <label for="male">Male</label><br/>
+      <input type="radio" id="female" name="gender" />
+      <label for="female">Female</label>
+
+
+        <!-- interests -->
+
+        <p>Who is interested in...</p>
+        <input type="checkbox" id="web-dev">
+        <label for="web-dev">Web Development</label><br>
+        <input type="checkbox" id="photoshop">
+        <label for="photoshop">Photoshop</label><br>
+        <input type="checkbox" id="madona" />
+        <label for="madona">Singing Madona Songs</label>
+
+    
+
+
+        <!-- contact info -->
+        <fieldset>
+            <legend>Contact Info</legend>
+            <input type="email" placeholder="Email" required>
+            <span class="tick"></span>
+            <input type="tel"  placeholder="Phone number" required>
+            <span class="tick"></span>
+        </fieldset>
+
+        <!-- contact method -->
+        <p>How would you like to be contacted?</p>
+        <select name="question" id="question">
+            <option value="q1">By email</option>
+            <option value="q2">By phone</option>
+        </select>
+        <input type="submit" value="submit">
+
+
+    </form>
+
+   
+    
+    
+</body>
+</html>

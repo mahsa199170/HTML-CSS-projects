@@ -1,0 +1,186 @@
+/* BASE FORM STYLES */
+
+body{
+    background: #141414;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+header{
+    background: #b61111;
+    text-align: center;
+    height: 50px;
+
+}
+
+form{
+    margin: 20px;
+    color: #eee;
+}
+
+form p{
+    font: 18px;
+    letter-spacing: 0.1em;
+}
+
+
+/* RADIO BOX STYLES */
+
+
+/* we want to make the radio button invisible, cause we want to put our own image instead of radio button, so we do: */
+
+input[type="radio"]{
+
+    opacity: 0;  
+    width: 0;
+    margin: 0;
+}
+
+label[for="male"], label[for="female"]{
+    margin-bottom: 10px;
+    display: inline-block;
+    padding-left: 26px;
+    background: url(img/checks.png) no-repeat;
+    background-position: 0 -32px;
+    line-height: 24px;
+    cursor: pointer;
+}
+/* when we make the radio buttons invisible, then we cannot select items, so we use a psudo class called checked */
+
+input:checked + label[for="male"],
+input:checked + label[for="female"]{
+    background-position: 0 0;
+    color: #ce1010;
+}
+
+/* Set the background-position of the label's background image to 0 0, which means that the top left corner of the image will be aligned with the top left corner of the label. If the label does not have a background image, this property will have no effect. */
+/* By using the adjacent sibling selector (+), this rule only applies to the immediately adjacent label element following the checked input element. */
+
+
+/* CHECK BOX STYLES */
+
+input[type="checkbox"]{
+    opacity: 0;
+    width: 0;
+    margin: 0;
+}
+
+label[for="web-dev"], label[for="photoshop"], label[for="madona"]{
+    display: inline-block;
+    margin-bottom: 10px;
+    padding-left: 26px;
+    background: url(img/checks.png) no-repeat;
+    background-position: 0 -98px;
+    line-height: 24px;
+    cursor: pointer;
+
+}
+
+input:checked + label[for="web-dev"],
+input:checked + label[for="photoshop"],
+input:checked + label[for="madona"]{
+    background-position: 0 -65px;
+    color: #ce1010;
+}
+
+
+/* TEXT INPUT STYLES & FIELDSET */
+
+fieldset{
+    padding: 20px;
+    margin: 20px;
+    border: 3px solid #222;
+}
+legend{
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+}
+
+input[type="email"],
+input[type="tel"]{
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px 10px 10px 50px;
+    border: 0;
+    border-radius: 4px;
+    background: url(img/inputs.png) no-repeat;
+    background-color: #222;
+    font-size: 16px;
+    color: #fff;
+    float: left;
+    clear: both;
+}
+
+input[type="email"]{
+    background-position: 7px 8px;
+}
+
+input[type="tel"]{
+    background-position: 7px -58px;
+}
+
+/* SELECT BOXES */
+
+select{
+    -webkit-appearance: none;  /* for chroom and safari*/
+    -moz-appearance: none;
+    -o-appearance: none; /* opera*/
+    -ms-appearance: none; /*microsoft internet explorer*/
+    appearance: none;  /* drop the defult styles of the selet from different browsers*/
+    
+
+    display: block;
+    margin: 30px 0;
+    padding: 10px 50px 10px 10px;
+    background: url(img/select.png) no-repeat 95% center;
+    background-color: #222;
+    color: #fff;
+    border-radius: 4px;
+    border: 2px solid #fff;
+    width: 280px;
+
+
+}
+
+input[type="submit"]{
+    background: #b61111;
+    padding: 15px;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    border-radius: 4px;
+    border: 0;
+    box-shadow: 1px 3px 5px rgba(0,0,0,0.5);
+    width:280px;
+}
+
+/* INPUT VALIDATION STYLES */
+
+
+input[type="email"]:valid,
+input[type="tel"]:valid {
+
+    border: 2px solid #fff
+}
+
+input[type="email"]:valid{
+    background-position:  7px -22px;
+}
+
+input[type="tel"]:valid{
+    background-position:  7px -97px;
+}
+
+
+input[type="email"]:valid + .tick,
+input[type="tel"]:valid + .tick {
+    background: url(img/tick.png) center;
+    background-size: 100%;
+    display: block;
+    width:20px;
+    height:20px;
+    float:left;
+    margin: 10px;
+}
